@@ -24,11 +24,10 @@ export const App = () => {
   }, [])
 
   if (!currentValutes) return <div>Loading...</div>
-  console.log(currentValutes)
   return (
     <div className="container">
       <Switch>
-        <Route path="/conventorPage" render={() => <ConvertorPage />}/>
+        <Route path="/" exact render={() => <ConvertorPage />}/>
         <Route path="/currentCurses" render={() => <CurrentCurses />}/>
       </Switch>
     </div>

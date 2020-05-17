@@ -1,2 +1,56 @@
 .conventerValutesPage
     margin-top: 15px
+
+.conventer-form
+    background: white
+    color: black
+    margin-top: 15px
+    height: 350px
+    padding: 20px
+
+.list-item
+    display: none
+    list-style: none
+    padding: 5px
+    margin: 0
+    transition: .3s linear
+    cursor: pointer
+    &:hover
+        background: grey
+
+.valute-list
+    position: relative
+    margin: 0
+    padding: 0 
+
+.valute-list_wrapper
+    position: absolute
+    background: white
+    z-index: 2
+    &.close
+        .list-item
+            display: none
+        
+    &.open
+        .list-item
+            display: block
+
+.active-valute_sign, .pasive-valute_sign
+    margin-left: 15px
+
+.form-col_active, .form-col_pasive
+    display: grid
+    align-items: center
+    grid-template-columns: 80% 20%
+
+.form-col_active
+    margin-bottom: 20px
+
+.conventer-form_wrapper
+    display: grid
+    justify-content: center
+
+.active-valute_number, .pasive-valute_number
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button 
+        -webkit-appearance: none

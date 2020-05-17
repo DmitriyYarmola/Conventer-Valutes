@@ -16,7 +16,7 @@ export const CurrentCurses: React.FC = () => {
 
     return (
         <div className="currentCursesPage">
-            <NavLink to="/conventorPage" className="btn">Conventor Valutes</NavLink>
+            <NavLink to="/" className="btn">Conventor Valutes</NavLink>
             <div className="valuteList">
                 {valuteList}
             </div>

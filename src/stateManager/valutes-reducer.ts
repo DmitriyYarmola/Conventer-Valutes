@@ -4,13 +4,19 @@ import { ValutesAPI } from "../api/api"
 import { ThunkAction } from 'redux-thunk';
 
 const GET_CURRENT_VALUES = "GET_CURRENT_VALUE"
-
+const SELECT_CURRENT_VALUTES = "SELECT_CURRENT_VALUTES"
+const SELECT_VISE_VALUTES = "SELECT_VISE_VALUTES"
+const INPUT_VALUTE = "INPUT_VALUTE"
 let initialState = {
-    currentValutes: null as getValutesAPIType[] | null
+    currentValutes: null as getValutesAPIType[] | null,
+    isSelectValuteActive: null as getValutesAPIType | null,
+    isSelectValutePasive: null as getValutesAPIType | null,
+    inputValue: '',
+    // resultValute:  
 }
 
 type InitialStateType = typeof initialState
-type ActionsType = GetCurrentValutesType
+type ActionsType = GetCurrentValutesType | SelectCurrentValutesType | SelectViseValutesType | InputValuteType
 
 export const ValutesReducer = (state = initialState, action: ActionsType): InitialStateType => {
     switch (action.type) {
@@ -19,21 +25,27 @@ export const ValutesReducer = (state = initialState, action: ActionsType): Initi
                 ...state,
                 currentValutes: action.currentValues
             }
+        case SELECT_CURRENT_VALUTES:
+            return {
+                ...state,
+                isSelectValuteActive: action.item
+            }
+        case SELECT_VISE_VALUTES:
+            return {
+                ...state,
+                isSelectValutePasive: action.item
+            }
+        case INPUT_VALUTE: 
+            return {
+                ...state,
+                inputValue: action.inputText
+            }
         default: return state
     }
 }
 
 /* ===ActionsCreate=== */
 
-export type currentValuesType = {
-    CharCode?: string
-    ID?: string
-    Name?: string
-    Nominal?: number
-    NumCode?: string
-    Previous?: number
-    Value?: number
-}
 
 type GetCurrentValutesType = {
     type: typeof GET_CURRENT_VALUES,
@@ -43,6 +55,36 @@ type GetCurrentValutesType = {
 const getCurrentValutes = (currentValues: getValutesAPIType[]): GetCurrentValutesType => ({
     type: GET_CURRENT_VALUES,
     currentValues
+})
+
+type SelectCurrentValutesType = {
+    type: typeof SELECT_CURRENT_VALUTES,
+    item: getValutesAPIType
+}
+
+export const selectCurrentValutes = (item: getValutesAPIType): SelectCurrentValutesType => ({
+    type: SELECT_CURRENT_VALUTES,
+    item
+})
+
+type SelectViseValutesType = {
+    type: typeof SELECT_VISE_VALUTES,
+    item: getValutesAPIType
+}
+
+export const selectViseValutes = (item: getValutesAPIType): SelectViseValutesType => ({
+    type: SELECT_VISE_VALUTES,
+    item
+})
+
+type InputValuteType = {
+    type: typeof INPUT_VALUTE,
+    inputText: string
+}
+
+export const inputValute = (inputText: string): InputValuteType => ({
+    type: INPUT_VALUTE,
+    inputText
 })
 
 /* ===Thunks=== */
