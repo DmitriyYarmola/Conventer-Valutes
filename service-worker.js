@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Conventer-Valutes/precache-manifest.7fbac4844dcdf01df4f47a405099222f.js"
+  "/Conventer-Valutes/precache-manifest.da9a4ee8948063f1176d500164d0688f.js"
 );
 
 self.addEventListener('message', (event) => {
