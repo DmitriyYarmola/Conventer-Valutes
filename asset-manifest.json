@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/EnemyDeaD/ConventerValutes/static/css/main.0dc043ca.chunk.css",
-    "main.js": "/EnemyDeaD/ConventerValutes/static/js/main.a8714419.chunk.js",
-    "main.js.map": "/EnemyDeaD/ConventerValutes/static/js/main.a8714419.chunk.js.map",
-    "runtime-main.js": "/EnemyDeaD/ConventerValutes/static/js/runtime-main.13fe34b1.js",
-    "runtime-main.js.map": "/EnemyDeaD/ConventerValutes/static/js/runtime-main.13fe34b1.js.map",
-    "static/js/2.1327ae64.chunk.js": "/EnemyDeaD/ConventerValutes/static/js/2.1327ae64.chunk.js",
-    "static/js/2.1327ae64.chunk.js.map": "/EnemyDeaD/ConventerValutes/static/js/2.1327ae64.chunk.js.map",
-    "index.html": "/EnemyDeaD/ConventerValutes/index.html",
-    "precache-manifest.6cd29b91d1e321323d58727db138697a.js": "/EnemyDeaD/ConventerValutes/precache-manifest.6cd29b91d1e321323d58727db138697a.js",
-    "service-worker.js": "/EnemyDeaD/ConventerValutes/service-worker.js",
-    "static/css/main.0dc043ca.chunk.css.map": "/EnemyDeaD/ConventerValutes/static/css/main.0dc043ca.chunk.css.map",
-    "static/js/2.1327ae64.chunk.js.LICENSE.txt": "/EnemyDeaD/ConventerValutes/static/js/2.1327ae64.chunk.js.LICENSE.txt"
+    "main.css": "/Conventer-Valutes/static/css/main.0dc043ca.chunk.css",
+    "main.js": "/Conventer-Valutes/static/js/main.3c59a4d1.chunk.js",
+    "main.js.map": "/Conventer-Valutes/static/js/main.3c59a4d1.chunk.js.map",
+    "runtime-main.js": "/Conventer-Valutes/static/js/runtime-main.d0286879.js",
+    "runtime-main.js.map": "/Conventer-Valutes/static/js/runtime-main.d0286879.js.map",
+    "static/js/2.1327ae64.chunk.js": "/Conventer-Valutes/static/js/2.1327ae64.chunk.js",
+    "static/js/2.1327ae64.chunk.js.map": "/Conventer-Valutes/static/js/2.1327ae64.chunk.js.map",
+    "index.html": "/Conventer-Valutes/index.html",
+    "precache-manifest.7fbac4844dcdf01df4f47a405099222f.js": "/Conventer-Valutes/precache-manifest.7fbac4844dcdf01df4f47a405099222f.js",
+    "service-worker.js": "/Conventer-Valutes/service-worker.js",
+    "static/css/main.0dc043ca.chunk.css.map": "/Conventer-Valutes/static/css/main.0dc043ca.chunk.css.map",
+    "static/js/2.1327ae64.chunk.js.LICENSE.txt": "/Conventer-Valutes/static/js/2.1327ae64.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.13fe34b1.js",
+    "static/js/runtime-main.d0286879.js",
     "static/js/2.1327ae64.chunk.js",
     "static/css/main.0dc043ca.chunk.css",
-    "static/js/main.a8714419.chunk.js"
+    "static/js/main.3c59a4d1.chunk.js"
   ]
 }
