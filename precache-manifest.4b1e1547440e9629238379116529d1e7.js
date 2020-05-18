@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bfc20826df4a73796aaaea635b1d9042",
+    "revision": "10a9cabf76ba74c01c2758a6d80abcfd",
     "url": "/Conventer-Valutes/index.html"
   },
   {
-    "revision": "40ad0139b42d328845a8",
+    "revision": "b93fe127f0a83a170aa0",
     "url": "/Conventer-Valutes/static/css/main.0dc043ca.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Conventer-Valutes/static/js/2.81244171.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "40ad0139b42d328845a8",
-    "url": "/Conventer-Valutes/static/js/main.89853560.chunk.js"
+    "revision": "b93fe127f0a83a170aa0",
+    "url": "/Conventer-Valutes/static/js/main.6f01000a.chunk.js"
   },
   {
     "revision": "037044a244883dafa7bd",
