@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/EnemyDeaD/ConventerValutes/static/css/main.0dc043ca.chunk.css",
+    "main.js": "/EnemyDeaD/ConventerValutes/static/js/main.a8714419.chunk.js",
+    "main.js.map": "/EnemyDeaD/ConventerValutes/static/js/main.a8714419.chunk.js.map",
+    "runtime-main.js": "/EnemyDeaD/ConventerValutes/static/js/runtime-main.13fe34b1.js",
+    "runtime-main.js.map": "/EnemyDeaD/ConventerValutes/static/js/runtime-main.13fe34b1.js.map",
+    "static/js/2.1327ae64.chunk.js": "/EnemyDeaD/ConventerValutes/static/js/2.1327ae64.chunk.js",
+    "static/js/2.1327ae64.chunk.js.map": "/EnemyDeaD/ConventerValutes/static/js/2.1327ae64.chunk.js.map",
+    "index.html": "/EnemyDeaD/ConventerValutes/index.html",
+    "precache-manifest.6cd29b91d1e321323d58727db138697a.js": "/EnemyDeaD/ConventerValutes/precache-manifest.6cd29b91d1e321323d58727db138697a.js",
+    "service-worker.js": "/EnemyDeaD/ConventerValutes/service-worker.js",
+    "static/css/main.0dc043ca.chunk.css.map": "/EnemyDeaD/ConventerValutes/static/css/main.0dc043ca.chunk.css.map",
+    "static/js/2.1327ae64.chunk.js.LICENSE.txt": "/EnemyDeaD/ConventerValutes/static/js/2.1327ae64.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.13fe34b1.js",
+    "static/js/2.1327ae64.chunk.js",
+    "static/css/main.0dc043ca.chunk.css",
+    "static/js/main.a8714419.chunk.js"
+  ]
+}
