@@ -23,7 +23,6 @@ export const App = () => {
     getCurrentValutes()
   }, [])
 
-  if (!currentValutes) return <div>Loading...</div>
   return (
     <div className="container">
       <Switch>

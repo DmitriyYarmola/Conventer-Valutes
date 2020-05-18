@@ -59,20 +59,20 @@ const getCurrentValutes = (currentValues: getValutesAPIType[]): GetCurrentValute
 
 type SelectCurrentValutesType = {
     type: typeof SELECT_CURRENT_VALUTES,
-    item: getValutesAPIType
+    item: getValutesAPIType | null
 }
 
-export const selectCurrentValutes = (item: getValutesAPIType): SelectCurrentValutesType => ({
+export const selectCurrentValutes = (item: getValutesAPIType | null): SelectCurrentValutesType => ({
     type: SELECT_CURRENT_VALUTES,
     item
 })
 
 type SelectViseValutesType = {
     type: typeof SELECT_VISE_VALUTES,
-    item: getValutesAPIType
+    item: getValutesAPIType | null
 }
 
-export const selectViseValutes = (item: getValutesAPIType): SelectViseValutesType => ({
+export const selectViseValutes = (item: getValutesAPIType | null): SelectViseValutesType => ({
     type: SELECT_VISE_VALUTES,
     item
 })
