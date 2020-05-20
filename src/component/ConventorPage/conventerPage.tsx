@@ -1,14 +1,13 @@
-import React, { useCallback, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './conventerPage.sass'
 import '././../common/button/button.sass'
 import { AppStateType } from '../../stateManager/redux-store'
 import { useSelector, useDispatch } from 'react-redux'
-import { selectCurrentValutes, selectViseValutes } from '../../stateManager/valutes-reducer'
+import { Actions, ActionsType } from '../../stateManager/valutes-reducer'
 import { getValutesAPIType } from '../../api/api'
 import { TextField } from '@material-ui/core'
 import { Button } from '@material-ui/core'
-import { SelectCurrentValutesType, SelectViseValutesType } from './../../stateManager/valutes-reducer'
 const ConvertorPage: React.FC = () => {
 
     /* ===UseState=== */
@@ -16,6 +15,7 @@ const ConvertorPage: React.FC = () => {
     let [classesPasive, setClassesPasive] = useState<string[]>(['valute-list_wrapper'])
     let [inputValueResultActive, setInputValueResultActive] = useState<string>('0')
     let [inputValueResultPasive, setInputValueResultPasive] = useState<string>('0')
+
     /* ===UseSelector=== */
     const currentValutes = useSelector((state: AppStateType) => state.valutesReducer.currentValutes)
     let isSelectValuteActive = useSelector((state: AppStateType) => state.valutesReducer.isSelectValuteActive)
@@ -29,11 +29,11 @@ const ConvertorPage: React.FC = () => {
         if (!isSelectValutePasive) isSelectValutePasive = currentValutes[1]
     }
 
-    const selectValutes = (item: getValutesAPIType | null, selectName: (item: getValutesAPIType | null) => SelectCurrentValutesType | SelectViseValutesType) => {
+    const selectValutes = (item: getValutesAPIType | null, selectName: (item: getValutesAPIType | null) => ActionsType) => {
         return dispatch(selectName(item))
     }
 
-    const onSelectValutes = (classesMode: string[], itemOfConditionActive: getValutesAPIType | null, itemOfConditionPasive: getValutesAPIType | null, setClasses: (value: React.SetStateAction<string[]>) => void, selectValutesOne: (item: getValutesAPIType | null) => SelectCurrentValutesType | SelectViseValutesType, selectValutesTwo: (item: getValutesAPIType | null) => SelectCurrentValutesType | SelectViseValutesType) => {
+    const onSelectValutes = (classesMode: string[], itemOfConditionActive: getValutesAPIType | null, itemOfConditionPasive: getValutesAPIType | null, setClasses: (value: React.SetStateAction<string[]>) => void, selectValutesOne: (item: getValutesAPIType | null) => ActionsType, selectValutesTwo: (item: getValutesAPIType | null) => ActionsType) => {
         return () => {
             selectValutes(itemOfConditionActive, selectValutesOne)
             selectValutes(itemOfConditionPasive, selectValutesTwo)
@@ -53,11 +53,11 @@ const ConvertorPage: React.FC = () => {
     }
 
     const signOfValutesActive = currentValutes?.map(item => {
-        return <li className="list-item" onClick={onSelectValutes(classesActive, item?.ccy === isSelectValutePasive?.ccy ? isSelectValutePasive : item, item?.ccy === isSelectValutePasive?.ccy ? isSelectValuteActive : isSelectValutePasive, setClassesActive, selectCurrentValutes, selectViseValutes)} key={item.ccy}>{item.ccy}</li>
+        return <li className="list-item" onClick={onSelectValutes(classesActive, item?.ccy === isSelectValutePasive?.ccy ? isSelectValutePasive : item, item?.ccy === isSelectValutePasive?.ccy ? isSelectValuteActive : isSelectValutePasive, setClassesActive, Actions.selectCurrentValutes, Actions.selectViseValutes)} key={item.ccy}>{item.ccy}</li>
     })
 
     const signOfValutesPasive = currentValutes?.map(item => {
-        return <li className="list-item" onClick={onSelectValutes(classesPasive, item?.ccy === isSelectValuteActive?.ccy ? isSelectValutePasive : isSelectValuteActive, item?.ccy === isSelectValuteActive?.ccy ? isSelectValuteActive : item, setClassesPasive, selectCurrentValutes, selectViseValutes)} key={item.ccy}>{item.ccy}</li>
+        return <li className="list-item" onClick={onSelectValutes(classesPasive, item?.ccy === isSelectValuteActive?.ccy ? isSelectValutePasive : isSelectValuteActive, item?.ccy === isSelectValuteActive?.ccy ? isSelectValuteActive : item, setClassesPasive, Actions.selectCurrentValutes, Actions.selectViseValutes)} key={item.ccy}>{item.ccy}</li>
     })
 
     const inputValueChange = (inputText: string, inputNumber: string) => {

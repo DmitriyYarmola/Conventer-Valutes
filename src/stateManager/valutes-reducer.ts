@@ -1,5 +1,5 @@
 import { getValutesAPIType } from './../api/api';
-import { AppStateType } from './redux-store';
+import { AppStateType, InferActionsType } from './redux-store';
 import { ValutesAPI } from "../api/api"
 import { ThunkAction } from 'redux-thunk';
 
@@ -16,7 +16,7 @@ let initialState = {
 }
 
 type InitialStateType = typeof initialState
-type ActionsType = GetCurrentValutesType | SelectCurrentValutesType | SelectViseValutesType | InputValuteType
+export type ActionsType = InferActionsType<typeof Actions>
 
 export const ValutesReducer = (state = initialState, action: ActionsType): InitialStateType => {
     switch (action.type) {
@@ -46,46 +46,26 @@ export const ValutesReducer = (state = initialState, action: ActionsType): Initi
 
 /* ===ActionsCreate=== */
 
+export const Actions = {
+    getCurrentValutes: (currentValutes: getValutesAPIType[]) => ({
+        type: GET_CURRENT_VALUES,
+        currentValutes
+    } as const),
 
-export type GetCurrentValutesType = {
-    type: typeof GET_CURRENT_VALUES,
-    currentValutes: getValutesAPIType[]
+    selectCurrentValutes: (item: getValutesAPIType | null) => ({
+        type: SELECT_CURRENT_VALUTES,
+        item
+    } as const),
+
+    selectViseValutes: (item: getValutesAPIType | null) => ({
+        type: SELECT_VISE_VALUTES,
+        item
+    } as const),
+    inputValute: (inputText: string) => ({
+        type: INPUT_VALUTE,
+        inputText
+    } as const)
 }
-
-const getCurrentValutes = (currentValutes: getValutesAPIType[]): GetCurrentValutesType => ({
-    type: GET_CURRENT_VALUES,
-    currentValutes
-})
-
-export type SelectCurrentValutesType = {
-    type: typeof SELECT_CURRENT_VALUTES,
-    item: getValutesAPIType | null
-}
-
-export const selectCurrentValutes = (item: getValutesAPIType | null): SelectCurrentValutesType => ({
-    type: SELECT_CURRENT_VALUTES,
-    item
-})
-
-export type SelectViseValutesType = {
-    type: typeof SELECT_VISE_VALUTES,
-    item: getValutesAPIType | null
-}
-
-export const selectViseValutes = (item: getValutesAPIType | null): SelectViseValutesType => ({
-    type: SELECT_VISE_VALUTES,
-    item
-})
-
-export type InputValuteType = {
-    type: typeof INPUT_VALUTE,
-    inputText: string
-}
-
-export const inputValute = (inputText: string): InputValuteType => ({
-    type: INPUT_VALUTE,
-    inputText
-})
 
 /* ===Thunks=== */
 
@@ -94,7 +74,7 @@ type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsType>
 export const getValutes = (): ThunkType => {
     return async (dispatch: any) => {
         let data = await ValutesAPI.getValutes()
-        dispatch(getCurrentValutes(data))
+        dispatch(Actions.getCurrentValutes(data))
     }
 }
 
