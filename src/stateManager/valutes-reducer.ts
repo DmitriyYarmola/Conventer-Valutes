@@ -23,7 +23,7 @@ export const ValutesReducer = (state = initialState, action: ActionsType): Initi
         case GET_CURRENT_VALUES:
             return {
                 ...state,
-                currentValutes: action.currentValues
+                currentValutes: action.currentValutes
             }
         case SELECT_CURRENT_VALUTES:
             return {
@@ -47,17 +47,17 @@ export const ValutesReducer = (state = initialState, action: ActionsType): Initi
 /* ===ActionsCreate=== */
 
 
-type GetCurrentValutesType = {
+export type GetCurrentValutesType = {
     type: typeof GET_CURRENT_VALUES,
-    currentValues: getValutesAPIType[]
+    currentValutes: getValutesAPIType[]
 }
 
-const getCurrentValutes = (currentValues: getValutesAPIType[]): GetCurrentValutesType => ({
+const getCurrentValutes = (currentValutes: getValutesAPIType[]): GetCurrentValutesType => ({
     type: GET_CURRENT_VALUES,
-    currentValues
+    currentValutes
 })
 
-type SelectCurrentValutesType = {
+export type SelectCurrentValutesType = {
     type: typeof SELECT_CURRENT_VALUTES,
     item: getValutesAPIType | null
 }
@@ -67,7 +67,7 @@ export const selectCurrentValutes = (item: getValutesAPIType | null): SelectCurr
     item
 })
 
-type SelectViseValutesType = {
+export type SelectViseValutesType = {
     type: typeof SELECT_VISE_VALUTES,
     item: getValutesAPIType | null
 }
@@ -77,7 +77,7 @@ export const selectViseValutes = (item: getValutesAPIType | null): SelectViseVal
     item
 })
 
-type InputValuteType = {
+export type InputValuteType = {
     type: typeof INPUT_VALUTE,
     inputText: string
 }
@@ -94,7 +94,6 @@ type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsType>
 export const getValutes = (): ThunkType => {
     return async (dispatch: any) => {
         let data = await ValutesAPI.getValutes()
-        console.log(data)
         dispatch(getCurrentValutes(data))
     }
 }

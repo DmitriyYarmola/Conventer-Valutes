@@ -1,16 +1,15 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, Suspense } from 'react';
 import './App.sass';
-import { CurrentCurses } from './component/CurrentCurses/currentCurses';
-import { useSelector, useDispatch } from 'react-redux';
-import { AppStateType } from './stateManager/redux-store';
+import { useDispatch } from 'react-redux';
 import { getValutes } from './stateManager/valutes-reducer';
 import { Switch, Route } from 'react-router';
-import { ConvertorPage } from './component/ConventorPage/conventerPage';
+import { Preloader } from './component/common/Preloader/preloader';
 
-export const App = () => {
+const CurrentCurses = React.lazy(() => import("./component/CurrentCurses/currentCurses"))
+const ConvertorPage = React.lazy(() => import("./component/ConventorPage/conventerPage"))
 
-  /* ===UseSelector=== */
-  const currentValutes = useSelector((state: AppStateType) => state.valutesReducer.currentValutes)
+
+export const App: React.FC = () => {
 
   /* ===UseDispatcj=== */
   const dispatch = useDispatch()
@@ -24,12 +23,14 @@ export const App = () => {
   }, [])
 
   return (
-    <div className="container">
-      <Switch>
-        <Route path="/" exact render={() => <ConvertorPage />}/>
-        <Route path="/currentCurses" render={() => <CurrentCurses />}/>
-      </Switch>
-    </div>
+    <Suspense fallback={<Preloader />}>
+      <div className="container">
+        <Switch>
+          <Route path="/" exact render={() => <ConvertorPage />} />
+          <Route path="/currentCurses" render={() => <CurrentCurses />} />
+        </Switch>
+      </div>
+    </Suspense >
   );
 }
 
