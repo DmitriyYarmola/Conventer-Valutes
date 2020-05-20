@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "629618b32468346b709193743ebe0f77",
+    "revision": "1bba3aa89f9d233a98a8e5c9cba7c8fc",
     "url": "/Conventer-Valutes/index.html"
   },
   {
@@ -8,11 +8,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Conventer-Valutes/static/css/4.9c3179bc.chunk.css"
   },
   {
-    "revision": "5e15a2bd9c08fa822433",
+    "revision": "73b570a4d875b710d722",
     "url": "/Conventer-Valutes/static/css/5.280375ef.chunk.css"
   },
   {
-    "revision": "2f0f4785b83ad7632ec0",
+    "revision": "de0eb79e23a58a571369",
     "url": "/Conventer-Valutes/static/css/main.ccc489b4.chunk.css"
   },
   {
@@ -36,19 +36,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Conventer-Valutes/static/js/4.9beef75e.chunk.js"
   },
   {
-    "revision": "5e15a2bd9c08fa822433",
-    "url": "/Conventer-Valutes/static/js/5.cfaa4675.chunk.js"
+    "revision": "73b570a4d875b710d722",
+    "url": "/Conventer-Valutes/static/js/5.7c673f83.chunk.js"
   },
   {
     "revision": "0a0d412fb432198e5e18",
     "url": "/Conventer-Valutes/static/js/6.8ca5b5d3.chunk.js"
   },
   {
-    "revision": "2f0f4785b83ad7632ec0",
-    "url": "/Conventer-Valutes/static/js/main.f3a2d6e0.chunk.js"
+    "revision": "de0eb79e23a58a571369",
+    "url": "/Conventer-Valutes/static/js/main.32574d9d.chunk.js"
   },
   {
-    "revision": "c31fe5c8708ea67f62a1",
-    "url": "/Conventer-Valutes/static/js/runtime-main.fc1cb448.js"
+    "revision": "5b61c6d2841cedf6e526",
+    "url": "/Conventer-Valutes/static/js/runtime-main.8440f496.js"
   }
 ]);

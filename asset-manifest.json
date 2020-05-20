@@ -3,22 +3,22 @@
     "static/js/0.c0e5f6bc.chunk.js": "/Conventer-Valutes/static/js/0.c0e5f6bc.chunk.js",
     "static/js/0.c0e5f6bc.chunk.js.map": "/Conventer-Valutes/static/js/0.c0e5f6bc.chunk.js.map",
     "main.css": "/Conventer-Valutes/static/css/main.ccc489b4.chunk.css",
-    "main.js": "/Conventer-Valutes/static/js/main.f3a2d6e0.chunk.js",
-    "main.js.map": "/Conventer-Valutes/static/js/main.f3a2d6e0.chunk.js.map",
-    "runtime-main.js": "/Conventer-Valutes/static/js/runtime-main.fc1cb448.js",
-    "runtime-main.js.map": "/Conventer-Valutes/static/js/runtime-main.fc1cb448.js.map",
+    "main.js": "/Conventer-Valutes/static/js/main.32574d9d.chunk.js",
+    "main.js.map": "/Conventer-Valutes/static/js/main.32574d9d.chunk.js.map",
+    "runtime-main.js": "/Conventer-Valutes/static/js/runtime-main.8440f496.js",
+    "runtime-main.js.map": "/Conventer-Valutes/static/js/runtime-main.8440f496.js.map",
     "static/js/3.cb6332cc.chunk.js": "/Conventer-Valutes/static/js/3.cb6332cc.chunk.js",
     "static/js/3.cb6332cc.chunk.js.map": "/Conventer-Valutes/static/js/3.cb6332cc.chunk.js.map",
     "static/css/4.9c3179bc.chunk.css": "/Conventer-Valutes/static/css/4.9c3179bc.chunk.css",
     "static/js/4.9beef75e.chunk.js": "/Conventer-Valutes/static/js/4.9beef75e.chunk.js",
     "static/js/4.9beef75e.chunk.js.map": "/Conventer-Valutes/static/js/4.9beef75e.chunk.js.map",
     "static/css/5.280375ef.chunk.css": "/Conventer-Valutes/static/css/5.280375ef.chunk.css",
-    "static/js/5.cfaa4675.chunk.js": "/Conventer-Valutes/static/js/5.cfaa4675.chunk.js",
-    "static/js/5.cfaa4675.chunk.js.map": "/Conventer-Valutes/static/js/5.cfaa4675.chunk.js.map",
+    "static/js/5.7c673f83.chunk.js": "/Conventer-Valutes/static/js/5.7c673f83.chunk.js",
+    "static/js/5.7c673f83.chunk.js.map": "/Conventer-Valutes/static/js/5.7c673f83.chunk.js.map",
     "static/js/6.8ca5b5d3.chunk.js": "/Conventer-Valutes/static/js/6.8ca5b5d3.chunk.js",
     "static/js/6.8ca5b5d3.chunk.js.map": "/Conventer-Valutes/static/js/6.8ca5b5d3.chunk.js.map",
     "index.html": "/Conventer-Valutes/index.html",
-    "precache-manifest.529a0b9cf321e560a41101ce882fb6e3.js": "/Conventer-Valutes/precache-manifest.529a0b9cf321e560a41101ce882fb6e3.js",
+    "precache-manifest.0b26a265fbebb2bd5b2e6cb23c8a2241.js": "/Conventer-Valutes/precache-manifest.0b26a265fbebb2bd5b2e6cb23c8a2241.js",
     "service-worker.js": "/Conventer-Valutes/service-worker.js",
     "static/css/4.9c3179bc.chunk.css.map": "/Conventer-Valutes/static/css/4.9c3179bc.chunk.css.map",
     "static/css/5.280375ef.chunk.css.map": "/Conventer-Valutes/static/css/5.280375ef.chunk.css.map",
@@ -27,9 +27,9 @@
     "static/js/3.cb6332cc.chunk.js.LICENSE.txt": "/Conventer-Valutes/static/js/3.cb6332cc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.fc1cb448.js",
+    "static/js/runtime-main.8440f496.js",
     "static/js/3.cb6332cc.chunk.js",
     "static/css/main.ccc489b4.chunk.css",
-    "static/js/main.f3a2d6e0.chunk.js"
+    "static/js/main.32574d9d.chunk.js"
   ]
 }
