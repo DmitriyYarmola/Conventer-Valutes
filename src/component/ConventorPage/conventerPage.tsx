@@ -13,7 +13,7 @@ export const ConvertorPage = () => {
     let [inputValueResultActive, setInputValueResultActive] = useState<string>('0')
     let [inputValueResultPasive, setInputValueResultPasive] = useState('0')
     /* ===UseSelector=== */
-    const currentValutes = useSelector((state: AppStateType) => state.valutesReducer.currentValutes)
+    let currentValutes = useSelector((state: AppStateType) => state.valutesReducer.currentValutes)
     let isSelectValuteActive = useSelector((state: AppStateType) => state.valutesReducer.isSelectValuteActive)
     let isSelectValutePasive = useSelector((state: AppStateType) => state.valutesReducer.isSelectValutePasive)
     // const inputValue = useSelector((state: AppStateType) => state.valutesReducer.inputValue)
