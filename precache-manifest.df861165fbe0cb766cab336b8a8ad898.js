@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1bba3aa89f9d233a98a8e5c9cba7c8fc",
+    "revision": "18e6f0a45af378fbefa1b6b0b298bebf",
     "url": "/Conventer-Valutes/index.html"
   },
   {
@@ -8,20 +8,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Conventer-Valutes/static/css/4.9c3179bc.chunk.css"
   },
   {
-    "revision": "73b570a4d875b710d722",
+    "revision": "76b65757f0e5d2f33e2e",
     "url": "/Conventer-Valutes/static/css/5.280375ef.chunk.css"
   },
   {
-    "revision": "de0eb79e23a58a571369",
+    "revision": "15bbb73d30c00d14b3ba",
     "url": "/Conventer-Valutes/static/css/main.ccc489b4.chunk.css"
   },
   {
-    "revision": "05b2203a5036f84e2b67",
-    "url": "/Conventer-Valutes/static/js/0.c0e5f6bc.chunk.js"
+    "revision": "2f29926cdaa390b593f6",
+    "url": "/Conventer-Valutes/static/js/0.b1d81c59.chunk.js"
   },
   {
     "revision": "3d2d88b7877918a326634499feeab80c",
-    "url": "/Conventer-Valutes/static/js/0.c0e5f6bc.chunk.js.LICENSE.txt"
+    "url": "/Conventer-Valutes/static/js/0.b1d81c59.chunk.js.LICENSE.txt"
   },
   {
     "revision": "bf97020171121bfbde29",
@@ -36,19 +36,19 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Conventer-Valutes/static/js/4.9beef75e.chunk.js"
   },
   {
-    "revision": "73b570a4d875b710d722",
-    "url": "/Conventer-Valutes/static/js/5.7c673f83.chunk.js"
+    "revision": "76b65757f0e5d2f33e2e",
+    "url": "/Conventer-Valutes/static/js/5.d6729827.chunk.js"
   },
   {
-    "revision": "0a0d412fb432198e5e18",
-    "url": "/Conventer-Valutes/static/js/6.8ca5b5d3.chunk.js"
+    "revision": "972a96f76cf383696138",
+    "url": "/Conventer-Valutes/static/js/6.f5771111.chunk.js"
   },
   {
-    "revision": "de0eb79e23a58a571369",
-    "url": "/Conventer-Valutes/static/js/main.32574d9d.chunk.js"
+    "revision": "15bbb73d30c00d14b3ba",
+    "url": "/Conventer-Valutes/static/js/main.09c77b4c.chunk.js"
   },
   {
-    "revision": "5b61c6d2841cedf6e526",
-    "url": "/Conventer-Valutes/static/js/runtime-main.8440f496.js"
+    "revision": "4792c01a69652f9047ff",
+    "url": "/Conventer-Valutes/static/js/runtime-main.6edf3245.js"
   }
 ]);
