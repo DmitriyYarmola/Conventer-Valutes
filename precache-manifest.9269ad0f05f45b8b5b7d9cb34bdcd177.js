@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "18e6f0a45af378fbefa1b6b0b298bebf",
+    "revision": "aa7eb4234c30104f7662b98b1bbbd359",
     "url": "/Conventer-Valutes/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Conventer-Valutes/static/css/4.9c3179bc.chunk.css"
   },
   {
-    "revision": "76b65757f0e5d2f33e2e",
+    "revision": "c866048c64f27d0a1f07",
     "url": "/Conventer-Valutes/static/css/5.280375ef.chunk.css"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Conventer-Valutes/static/js/4.9beef75e.chunk.js"
   },
   {
-    "revision": "76b65757f0e5d2f33e2e",
-    "url": "/Conventer-Valutes/static/js/5.d6729827.chunk.js"
+    "revision": "c866048c64f27d0a1f07",
+    "url": "/Conventer-Valutes/static/js/5.c4cdd4d5.chunk.js"
   },
   {
     "revision": "972a96f76cf383696138",
@@ -48,7 +48,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Conventer-Valutes/static/js/main.09c77b4c.chunk.js"
   },
   {
-    "revision": "4792c01a69652f9047ff",
-    "url": "/Conventer-Valutes/static/js/runtime-main.6edf3245.js"
+    "revision": "33e7c6c58555e491fdca",
+    "url": "/Conventer-Valutes/static/js/runtime-main.aba7f92e.js"
   }
 ]);
