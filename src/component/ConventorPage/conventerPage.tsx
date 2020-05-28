@@ -83,7 +83,7 @@ const ConvertorPage: React.FC = () => {
             </NavLink>
             <div className="conventer-form">
                 <div className="currentValue-valute">
-                    <span>1 {isSelectValuteActive?.ccy} = {((Number(isSelectValuteActive?.sale) / Number(isSelectValutePasive?.sale)).toFixed(2))} {isSelectValutePasive?.ccy}</span>
+                    <span>1 {isSelectValuteActive?.ccy} = {isSelectValuteActive?.ccy === 'BTC' ? (((Number(isSelectValuteActive?.sale) * Number(currentValutes[0].sale)) / Number(isSelectValutePasive?.sale))).toFixed(2): (Number(isSelectValuteActive?.sale) / Number(isSelectValutePasive?.sale)).toFixed(2)} {isSelectValutePasive?.ccy}</span>
                 </div>
                 <div className="conventer-form_wrapper">
                     <div className="form-col form-col_active">
