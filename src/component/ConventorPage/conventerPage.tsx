@@ -13,14 +13,15 @@ const ConvertorPage: React.FC = () => {
     /* ===UseState=== */
     let [classesActive, setClassesActive] = useState<string[]>(['valute-list_wrapper'])
     let [classesPasive, setClassesPasive] = useState<string[]>(['valute-list_wrapper'])
-    let [inputValueResultActive, setInputValueResultActive] = useState<string>('0')
-    let [inputValueResultPasive, setInputValueResultPasive] = useState<string>('0')
+    let [inputValueResultActive, setInputValueResultActive] = useState<string>('1')
+    let [inputValueResultPasive, setInputValueResultPasive] = useState<string>('1')
 
     /* ===UseSelector=== */
     const currentValutes = useSelector((state: AppStateType) => state.valutesReducer.currentValutes)
     let isSelectValuteActive = useSelector((state: AppStateType) => state.valutesReducer.isSelectValuteActive)
     let isSelectValutePasive = useSelector((state: AppStateType) => state.valutesReducer.isSelectValutePasive)
 
+    console.log(currentValutes)
     /* ===UseDispatch=== */
     const dispatch = useDispatch()
 
@@ -65,8 +66,8 @@ const ConvertorPage: React.FC = () => {
         setInputValueResultPasive(inputNumber)
     }
     useEffect(() => {
-        setInputValueResultPasive(String((Number(isSelectValuteActive?.sale) / Number(isSelectValutePasive?.sale) * Number(inputValueResultActive)).toFixed(2)))
-    }, [isSelectValutePasive?.ccy, isSelectValuteActive?.ccy])
+        setInputValueResultPasive(isSelectValuteActive?.ccy === 'BTC' ? String((((Number(isSelectValuteActive?.sale) * Number(currentValutes![0].sale)) / Number(isSelectValutePasive?.sale))).toFixed(2)) : String((Number(isSelectValuteActive?.sale) / Number(isSelectValutePasive?.sale) * Number(inputValueResultActive)).toFixed(2)))
+    }, [isSelectValutePasive, inputValueResultActive, isSelectValuteActive, currentValutes])
 
 
 
@@ -89,7 +90,7 @@ const ConvertorPage: React.FC = () => {
                         <div className="active-valute_number">
                             <TextField type="number" inputProps={{ min: "0" }} value={inputValueResultActive} onChange={
                                 (e: React.ChangeEvent<HTMLInputElement>) => {
-                                    return inputValueChange(e.currentTarget.value, String((Number(isSelectValuteActive?.sale) / Number(isSelectValutePasive?.sale) * Number(e.currentTarget.value)).toFixed(2)))
+                                    return inputValueChange(e.currentTarget.value, isSelectValuteActive?.ccy === 'BTC' ? String(((Number(e.currentTarget.value)) * ((Number(isSelectValuteActive?.sale) * Number(currentValutes[0].sale)) / Number(isSelectValutePasive?.sale))).toFixed(2)) : String((Number(isSelectValuteActive?.sale) / Number(isSelectValutePasive?.sale) * Number(e.currentTarget.value)).toFixed(2)))
                                 }
                             } placeholder="valute" color="secondary" />
                         </div>
@@ -103,7 +104,7 @@ const ConvertorPage: React.FC = () => {
                     <div className="form-col form-col_pasive">
                         <div className="pasive-valute_number">
                             <TextField type="number" inputProps={{ min: "0" }} value={inputValueResultPasive} onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-                                return inputValueChange(String((Number(isSelectValutePasive?.sale) / Number(isSelectValuteActive?.sale) * Number(e.currentTarget.value)).toFixed(2)), e.currentTarget.value)
+                                return inputValueChange(isSelectValutePasive?.ccy === 'BTC' ? String(((Number(e.currentTarget.value)) * ((Number(isSelectValutePasive?.sale) * Number(currentValutes[0].sale)) / Number(isSelectValuteActive?.sale))).toFixed(2)) : String((Number(isSelectValutePasive?.sale) / Number(isSelectValuteActive?.sale) * Number(e.currentTarget.value)).toFixed(2)), e.currentTarget.value)
                             }} color="secondary" placeholder="valute" />
                         </div>
                         <div className="pasive-valute_sign">
