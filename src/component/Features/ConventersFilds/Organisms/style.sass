@@ -1,0 +1,30 @@
+.valute-list
+    position: relative
+    margin: 0
+    padding: 0 
+
+.valute-list_wrapper
+    position: absolute
+    background: white
+    z-index: 2
+    &.close
+        .list-item
+            display: none
+        
+    &.open
+        .list-item
+            display: block
+
+.valute_sign
+    margin-left: 15px
+
+.valute_number
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button 
+        -webkit-appearance: none
+
+.form-col
+    display: grid
+    align-items: center
+    margin: 10px
+    grid-template-columns: 80% 20%

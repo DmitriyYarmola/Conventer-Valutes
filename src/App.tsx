@@ -3,10 +3,10 @@ import './App.sass';
 import { useDispatch } from 'react-redux';
 import { getValutes } from './stateManager/valutes-reducer';
 import { Switch, Route } from 'react-router';
-import { Preloader } from './component/common/Preloader/preloader';
+import { Preloader } from './component/UI/Atoms/Preloader/preloader';
 
-const CurrentCurses = React.lazy(() => import("./component/CurrentCurses/currentCurses"))
-const ConvertorPage = React.lazy(() => import("./component/ConventorPage/conventerPage"))
+const Curses = React.lazy(() => import("./component/Pages/Curses/index"))
+const Converter = React.lazy(() => import("./component/Pages/Conventer/index"))
 
 
 export const App: React.FC = () => {
@@ -26,8 +26,8 @@ export const App: React.FC = () => {
     <Suspense fallback={<Preloader />}>
       <div className="container">
         <Switch>
-          <Route path="/" exact render={() => <ConvertorPage />} />
-          <Route path="/currentCurses" render={() => <CurrentCurses />} />
+          <Route path="/" exact render={() => <Converter />} />
+          <Route path="/currentCurses" render={() => <Curses />} />
         </Switch>
       </div>
     </Suspense >
